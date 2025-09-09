@@ -1,0 +1,33 @@
+{
+  "id": "cinematic-reveal",
+  "title": "Cinematic Reveal",
+  "description": "Short, polished reveal animations for documents. GM and selected players, with optional sound.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "authors": [
+    {
+      "name": "Mr. Beasley"
+    },
+    {
+      "name": "Your Friendly Code Wrangler"
+    }
+  ],
+  "esmodules": ["scripts/main.js"],
+  "styles": ["styles/cinematic-reveal.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "socket": true,
+  "url": "https://github.com/themrbeasley/cinematic-reveal",
+  "bugs": "https://github.com/themrbeasley/cinematic-reveal/issues",
+  "flags": {
+    "coreCompatibility": ">=13"
+  }
+}
