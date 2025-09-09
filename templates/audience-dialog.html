@@ -1,0 +1,73 @@
+<form class="cr-dialog">
+  <div class="form-group">
+    <label>Audience</label>
+    <select name="audience">
+      <option value="everyone">Everyone</option>
+      <option value="gm">Only GM</option>
+      <option value="selected">Selected Players…</option>
+    </select>
+  </div>
+
+  <div class="form-group cr-selected" style="display:none">
+    {{#each users}}
+      <label><input type="checkbox" name="user" value="{{this.id}}" {{#if this.checked}}checked{{/if}}> {{this.name}}</label><br/>
+    {{/each}}
+  </div>
+
+  <div class="form-group">
+    <label>Effect</label>
+    <select name="effect">
+      {{#each effects}}
+        <option value="{{this.id}}">{{this.label}}</option>
+      {{/each}}
+    </select>
+    <button type="button" class="cr-preview"><i class="fa-solid fa-eye"></i> Preview</button>
+  </div>
+
+  <div class="form-group">
+    <label>Duration (s)</label>
+    <input type="number" step="0.1" min="0.8" max="2.5" name="duration" value="1.6">
+  </div>
+
+  <div class="form-group">
+    <label>Easing</label>
+    <input type="text" name="easing" value="cubic-bezier(0.16,1,0.3,1)">
+  </div>
+
+  <fieldset>
+    <legend>Sound</legend>
+    <label><input type="checkbox" name="soundEnabled" checked> Play sound</label>
+    <div class="form-group">
+      <label>Source</label>
+      <select name="soundSource">
+        <option value="none">None</option>
+        <option value="file">File</option>
+        <option value="playlist">Playlist</option>
+      </select>
+    </div>
+    <div class="form-group cr-file" style="display:none">
+      <input type="text" name="soundPath" placeholder="sounds/parchment.mp3">
+      <button type="button" class="file-picker" data-type="audio">Pick</button>
+    </div>
+    <div class="form-group cr-playlist" style="display:none">
+      <select name="playlist"></select>
+      <select name="sound"></select>
+    </div>
+    <label>Volume <input type="range" name="volume" min="0" max="1" step="0.05" value="0.6"></label>
+    <label><input type="checkbox" name="duck" checked> Duck ambient audio</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Mode</legend>
+    <label><input type="radio" name="mode" value="overlay" checked> Over Scene</label>
+    <label><input type="radio" name="mode" value="in-sheet"> In-Sheet</label>
+    <label><input type="checkbox" name="pin"> Pin to background</label>
+  </fieldset>
+
+  <label><input type="checkbox" name="remember"> Remember my choice for this scene</label>
+
+  <footer class="sheet-footer flexrow">
+    <button type="submit" class="cr-run"><i class="fa-solid fa-sparkles"></i> Reveal</button>
+    <button type="button" class="cancel">Cancel</button>
+  </footer>
+</form>
