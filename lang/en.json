@@ -1,0 +1,28 @@
+{
+  "CINEMATIC_REVEAL": "Cinematic Reveal",
+  "REVEAL_WITH_ANIMATION": "Reveal with Animation…",
+ 
+  "AUDIENCE": "Audience",
+  "EVERYONE": "Everyone",
+  "ONLY_GM": "Only GM",
+  "SELECTED_PLAYERS": "Selected players",
+  "EFFECT": "Effect",
+  "DURATION": "Duration (s)",
+  "EASING": "Easing",
+  "SOUND": "Sound",
+  "PLAY_SOUND": "Play sound",
+  "SOURCE": "Source",
+  "NONE": "None",
+  "FILE": "File",
+  "PLAYLIST": "Playlist",
+  "VOLUME": "Volume",
+  "DUCK_AMBIENT": "Duck ambient audio",
+  "MODE": "Mode",
+  "OVER_SCENE": "Over Scene",
+  "IN_SHEET": "In-Sheet",
+  "PIN": "Pin to background",
+  "REMEMBER": "Remember my choice for this scene",
+  "PREVIEW": "Preview",
+  "RUN": "Reveal",
+  "CANCEL": "Cancel"
+}
